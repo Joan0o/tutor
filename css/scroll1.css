@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+/*
+    Author: Sekina Shifa
+   Date:   02/19/2022
+   
+   Filename: code2-2.css
+
+*/
+
+header>h1 {
+    text-align: center;
+    font-family: impact;
+    font-size: 3em;
+}
+
+nav>h1 {
+    font-size: 1.2em;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+article>h1 {
+    font-size: 2em;
+    font-family: cursive;
+}
+
+nav ul {
+    list-style-type: none;
+    line-height: 2em;
+}
+
+a {
+    color: ivory;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    float: right;
+    padding-right: 15px
+}
