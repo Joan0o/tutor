@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+   
+<head>
+    <meta charset="utf-8">
+    <title>Grid Assignment</title>
+    <style>
+       #layout { 
+        display: grid;
+        width:100%;
+        height: 500px; 
+   
+        grid-template-areas:
+        "header header header"
+        "side-left content side-right";
+
+        grid-template-rows: 200px 300px;
+        grid-template-columns: 200px 600px 200px;
+       }
+
+        #layout> .header {
+        grid-area: header;
+      }
+
+       #layout> .program-descripton {
+        grid-area: side-right;
+    
+       }
+
+       #layout> .image-content {
+        grid-area: content;
+        
+       }
+
+       #layout > .outcomes {
+        grid-area: side-left;
+       }
+
+    </style>
+   
+    
+</head>
+<body>
+
+ <div id="layout">
+
+
+    
+    <div class="header">
+    <h1>Web Development & Design</h1>
+    </div>
+    
+
+    <div class= "image-content">
+        
+    <img src="web-development-500x282.jpg"
+         alt="Student prototyping web site">
+         <p>Enter one of the hottest fields in technology today with a Web Development and Design associate’s degree. You’ll gain the employable skills needed to gain an entry-level position as a website developer, programmer or user experience designer. Topics of study include website visual design standards, HTML, Java programming, mobile application development and database integration.</p>
+         <p>Students who have previously received a web development and design certificate from Montco can seamlessly integrate into this degree program. After graduation, our students frequently transfer to four-year institutions offering web development programs of study.</p>
+    </div>
+
+    <div class="program-description">
+        <p> Montco’s Web Development and Design Associate of Applied Science degree program gives you the marketable skills to 
+            stand out from the pack online.</p>
+        
+    </div>
+
+    <div class= "outcomes">
+   
+    <h3> Program Outcomes</h3>
+    <ul>
+        <li>Develop a secure, scalable, and standards compliant website.</li>
+        <li>Utilize databases to develop dynamic interactive websites and applications.</li>
+    </ul>
+    </div>
+
+</div>
+
+
+</body>
+</html>
