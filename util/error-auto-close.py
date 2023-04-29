@@ -1,3 +1,4 @@
+#pip install pywin32
 import win32gui
 import win32con
 import sched
