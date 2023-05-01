@@ -1,109 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>JS Assignment</title>
-    <style>
-        #gridcontainer {
-            display:grid;
-            width:80%;
-            margin:auto;
-            grid-template-columns: 1fr 1fr;
-            grid-column-gap: 1em; 
-        }
-    
-        #box {
-            background-color:yellow;
-            display:flex;
-            align-items:center;
-            justify-content: center;
-        }
-        
-        h1, p {
-            text-align: center;
-        }
-    </style>
-    
-    <script>
-        
-        /**********
-        EXAMPLE: All solutions should look like the following item. 
-        **********/
-      
-        function example() {            
-            document.getElementById("title").style.color = "red";
-            document.getElementById("title").style.fontStyle = "italic";
-        }
-        
-       
-        
-        function changeBG() {           
-            document.getElementById("box").style.backgroundColor = "blue";
-            document.getElementById("box").style.fontStyle = "italic";
-        }
-
-        /************
-        Challenge: Remove the hide() and show() functions and make this is a single method called toggle() that hides and shows the text.
-        *************/
-        function hide() {            
-            document.getElementById("text").textContent = "";
-         
-        }
-        
-        function show() {           
-            document.getElementById("text").textContent = "Hello!";
-        }
-        
-        /**************
-        In this function, change at least 3 specific properties of the text displayed in the right box.
-        ***************/
-        function changeFont() {           
-          
-         		document.getElementById("text").style.fontStyle = "oblique";
-                
-                document.getElementById("text").style.color = "red";
-          		document.getElementById("text").style.fontSize = "50px";
-        }
-        /**********
-        Don't forget to add at least 1 additional Javascript item to the page!
-        This could be something you research on your own or one of the items discussed
-           in the book or this week's lecture.
-        **********/
-        
-    </script>
-    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-<h1 id="title">Fun with Javascript</h1>
-    <div id="gridcontainer">
-        <div>
-            <ul>
-                <li>
-                    <a href="#" onclick="example()">EXAMPLE: Change Header Text Color</a>
-                </li>
-                <li>
-                    <a href="#" onclick="changeBG()">Change Background Color</a>
-                </li>
-                <li>
-                    <a href="#" onclick="hide()">Hide Text</a>
-                </li>
-                <li>
-                    <a href="#" onclick="show()">Show Text</a>
-                </li>
-                <li>
-                    <a href="#" onclick="changeFont()">Change Font Style</a>
-                </li>
-            </ul>
-        </div>
-        <div id="box">
-            <p id="text">Hello!</p>
-        </div>        
-    </div>
-
-<p>Somewhere on this page add at least 1 additional Javscript feature. What you add is up to you but try to have fun with it and be sure to challenge yourself. Try to think of a feature you can use in your final project!</p>   
     
-<p><em>*Reload the page to reset the styles.</em></p>    
-        
 </body>
 </html>
-
