@@ -1,7 +1,120 @@
+body, p, header, aside, section, article, h1, h2, h3, nav, div, footer {
+   padding: 10;
+   margin: 0;
+}
+p {
+   margin-bottom: 1.2 em;
+}
+header {
+   text-align: center;
+background-color: #bdb76b;
+   height: 200px;
+}
+header h1 {
+   color: #2542122;
+   font-weight: 900;
+   font-size: 2.5em;
+   margin: 0 0 1em 0;
+}
 aside {
-    border: 4px double rgb(45,93,62);
-    border-radius: 30px;
- }
- body{
-    background: brown;
- }
+   max-width: 200px;
+   float: left;
+   min-height: 600px;
+   color:#000000;
+   background-color: #dcdcdc;
+   padding-right: 10px;
+}
+aside p {
+   padding: 10 px 20px;
+}
+section {
+   padding: 10px;
+   float: left:
+   max-width: 65%;
+   background-image: url(../bg01.png)
+}
+article p {
+   padding-left: 1.5em;
+}
+footer {
+   clear: both;
+   background-color:#bdb76b;
+   text-align: center;
+   font-size: 85%;
+   min-height:100px;
+}
+footer p {
+   padding-top: 35%;
+}
+nav ul {
+   margin: 0;
+   list-style: none;
+}
+nav ul li {
+   display: inline-block;
+   margin: 0 0.35em;
+}
+nav ul li ul {
+   display: none;
+}
+nav ul li a{
+   border-radius: 5px;
+   border: solid gray 2px;
+   color: black;
+   font-family: sans-serif;
+   text-decoration: none;
+   padding: 0.6 em 1.2em 0.6 em 1.2 em;
+   background-color: whitesmoke;
+   outline: 0;
+}
+.cols {
+ /*  -webkit-column-count: 3;
+   -moz-column-count: 3;
+   column-count: 3;
+   -webkit-column-gap: 10px;
+   -moz-column-gap: 10px;
+   column-gap: 10px; */
+   -webkit-column-width: 200px;
+   -moz-column-width: 200px;
+   column-width: 200px;
+}
+.cols-span {
+   -webkit-column-span: all;
+   -moz-column-span: all;
+   column-span: all;
+   font-size: 1.2 em;
+   margin-bottom: 0.2em;
+   line-height: 1.2 em;
+}
+.cols p {
+   margin-bottom: 1.1em;
+   text-align: justify;
+}
+.lead {
+   font-family: Georgia;
+   font-size: 1.3em;
+   text-align: left;
+   font-style: italic;
+}
+.rgt {
+   float: right;
+   max-width: 30%;
+}
+img {
+   padding: 0.3em;
+}
+.spec {
+   margin: -5px 5 10px 5;
+   border-bottom: 1px solid #483838;
+   line-height: 0;
+}
+.ads{
+   float: right;
+   text-align: center;
+   font-size: 90%;
+   color: #b49898;
+   background-color: #dcdcdc;
+   }
+.ads p {
+   padding-top: 0.3em;
+}
