@@ -1,95 +1,36 @@
-/* here are the arrays used for project 1 
-data.js*/
+"use strict"
 
-var filenames = ["106020.jpg", "116010.jpg", "120010.jpg"];
-var titles = ["Girl with a Pearl Earring", "Artist Holding a Thistle", "Portrait of Eleanor of Toledo"];
-var quantities = [3, 1, 2];
-var prices = [80, 125, 75];
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 9
+   Coding Challenge 1
 
-/* 
-   NOTE: parallel arrays are not an ideal way to represent this data.
-         We have done this to simplify this exercise.
-         
-         A better approach would be to turn these parallel arrays
-         into an array of cart item objects. Objects are used in
-         projects 2 and 3.
-*/         
+   Clock
+   Author: Sanaa Gibbs
+   Date:   4/27/2023
 
-
-/* add loop and other code here ... 
-chapter08-project01.js
+   function getWeekday(dayNum)
+	  Returns the text of the day of the week where dayNum
+	  is the number of the week from 0 (Sunday) to 6 (Saturday)
 */
-var subTotal = 0;
-var tax = 0;
-var shipping = 0;
-var grandTotal = 0;
+runClock()
+setInterval(runClock, 1000);
 
-var file = "";
-var title = "";
-var quantity = 0;
-var price = 0;
-var total = 0;
 
-for(var i = 0; i < filenames.length; i++) {
-	file = filenames[i];
-	title = titles[i];
-	quantity = quantities[i];
-	price = prices[i];
-	total = calculateTotal(quantity, price);
-	subTotal += total;
-	outputCartRow(file, title, quantity, price, total);
+function runClock() {
+	var thisDay = new Date();
+	var thisDate = thisDay.toLocaleDateString();
+	var thisDayNum = thisDay.getDay();
+	var thisWeekday = getWeekday(thisDayNum);
+	var thisTime = thisDay.toLocaleTimeString();
+
+	document.getElementById("date").textContent = thisDate;
+	document.getElementById("wday").textContent = thisWeekday;
+	document.getElementById("time").textContent = thisTime;
+
+
 }
-
-//tax
-tax = subTotal * 0.10;
-
-//shipping
-if(subTotal > 1000) 
-	shipping = 0;
-else
-	shipping = 40;
-
-//grand total
-grandTotal = subTotal + tax + shipping;
-
-//print totals
-document.write("<tr class='totals'>");
-document.write("<td colspan='4'>Subtotal</td>");
-document.write("<td>$" + subTotal.toFixed(2) + "</td>");
-document.write("</tr>");
-
-document.write("<tr class='totals'>");
-document.write("<td colspan='4'>Tax</td>");
-document.write("<td>$" + tax.toFixed(2) + "</td>");
-document.write("</tr>");
-
-
-document.write("<tr class='totals'>");
-document.write("<td colspan='4'>Shipping</td>");
-document.write("<td>$" + shipping.toFixed(2) + "</td>");
-document.write("</tr>");
-
-document.write("<tr class='totals focus'>");
-document.write("<td colspan='4'>Grand Total</td>");
-document.write("<td>$" + grandTotal.toFixed(2) + "</td>");
-document.write("</tr>");
-
-
-
-
-
-/* define functions here 
-function.js */
-function calculateTotal(quantity, price) {
-	return quantity * price;
-}
-
-function outputCartRow(file, title, quantity, price, total) {
-	document.write("<tr>");
-	document.write("<td> <img src='images/" + file + "'></td>");
-	document.write("<td>"+ title + "</td>");
-	document.write("<td>"+ quantity + "</td>");
-	document.write("<td>$"+ price.toFixed(2) + "</td>");
-	document.write("<td>" + calculateTotal(quantity, price).toFixed(2) + "</td>");
-	document.write("</tr>");
+function getWeekday(dayNum) {
+	var wDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+	return wDays[dayNum];
 }
