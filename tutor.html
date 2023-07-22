@@ -1,14 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div id="date"></div>
-    <div id="wday"></div>
-    <div id="time"></div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="It is a high end restaurant" />
+    <meta
+      name="keywords"
+      content="town, restaurant, food, recipes, menu, location, customers, dining, luxury, events, night out,food"
+    />
+    <meta name="author" content="Simon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.adobe.com/css?family=athelas" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".fa").hover(
+          function () {
+            $(this).addClass("animated");
+          },
+          function () {
+            $(this).removeClass("animated");
+          }
+        );
+        $(".fa").hover(function(){
+          $(this).animate({
+            height: 'toggle'
+          });
+        }); 
+      });
+
+    </script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="menu.html">Shop</a>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+
+    <div style="text-align: center">
+      <a href="index.html">
+        <img width="200" src="images/acadia_logo.png" alt="logo" />
+      </a>
+      <h1>Our Vision</h1>
+      <p>
+        As Acadia Park Equipment Co. moves towards its goal of making it
+        affordable for outdoor enthusiasts to enjoy nature, we will support
+        organizations whose main efforts involve research to continue
+        preservation efforts towards the environment. We regularly encourage
+        employees to engage in preservation and clean-up efforts to help the
+        environment.
+      </p>
+
+      <img src="forestt.png" alt="forest" />
+      <div class="formLayout">
+        <p>Join us for</p>
+        <img src="mountainman.jpg" alt="picture of mountain man" />
+      </div>
+    </div>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <span class="fa fa-icon_name"></span>
+    <!-- Footer Menu -->
+    <footer id="footer">
+      <!-- Company Details -->
+      <!-- 1. Address
+        2. Contact Number
+        3. Enquiry Mail
+    -->
+      <div class="company-details">
+        <div class="row">
+          <div id="col1">
+            <span
+              id="icon"
+              class="fa fa-map-marker"
+              style="margin-bottom: 6px"
+            ></span>
+
+            <span>
+              4910 S 135th St.
+              <br />Manchester, New Hampshire <br />03101
+            </span>
+          </div>
+
+          <div id="col2">
+            <span id="icon" class="fa fa-phone"></span>
+
+            <span> Telephone: (202)-555-0154 </span>
+          </div>
+
+          <div id="col3">
+            <span id="icon" class="fa fa-envelope"></span>
+            <span>acadia@gmail.com</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Section -->
+      <div class="copyright">
+        <p>© All rights reserved | Acadia</p>
+        <ul class="contact">
+          <li>
+            <a href="#" class="fa fa-twitter"> </a>
+          </li>
+          <li>
+            <a href="#" class="fa fa-facebook"> </a>
+          </li>
+          <li>
+            <a href="#" class="fa fa-instagram"> </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>
