@@ -1,42 +1,131 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-   <!--
-   New Perspectives on HTML5 and CSS3, 8th Edition
-   Tutorial 1
-   Coding Challenge 2
-   
-   Author:Zealous Brevett
-   Date:04/16/2023
-   Filename: code1-2.html
-   -->
-   <meta charset="utf-8">
-   <title>Coding Challenge 1-2</title>
-<head>
-<body>
-<h1>Revelation</h1>
-<h2>by Robert Frost</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="It is a high end restaurant" />
+    <meta
+      name="keywords"
+      content="town, restaurant, food, recipes, menu, location, customers, dining, luxury, events, night out,food"
+    />
+    <meta name="author" content="Simon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.adobe.com/css?family=athelas" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".fa").hover(
+          function () {
+            $(this).addClass("animated");
+          },
+          function () {
+            $(this).removeClass("animated");
+          }
+        );
+        $(".fa").hover(function(){
+          $(this).animate({
+            height: 'toggle'
+          });
+        }); 
+      });
 
-<p> We make ourselves a place apart <br />
-  &nbsp;&nbsp;&nbsp;Behind light words that tease and flout,<br />
-    But oh, the agitated heart<br />
-   &nbsp;&nbsp;&nbsp;Till someone find us really out.<br /></p>
+    </script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="menu.html">Shop</a>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
 
-<p> 'Tis pity if the case require<br />
-    &nbsp;&nbsp;&nbsp; (Or so we say) that in the end<br />
-     We speak the literal to inspire<br />
-     &nbsp;&nbsp;&nbsp;The understanding of a friend.<br /></p>
+    <div style="text-align: center">
+      <a href="index.html">
+        <img width="200" src="images/acadia_logo.png" alt="logo" />
+      </a>
+      <h1>Our Vision</h1>
+      <p>
+        As Acadia Park Equipment Co. moves towards its goal of making it
+        affordable for outdoor enthusiasts to enjoy nature, we will support
+        organizations whose main efforts involve research to continue
+        preservation efforts towards the environment. We regularly encourage
+        employees to engage in preservation and clean-up efforts to help the
+        environment.
+      </p>
 
-<p> But so with all, from babes that play<br />
-    &nbsp;&nbsp;&nbsp;At hide-and-seek to God afar,<br />
-    So all who hide too well away<br />
-    &nbsp;&nbsp;&nbsp;Must speak and tell us there they are.<br /></p>
+      <img src="forestt.png" alt="forest" />
+      <div class="formLayout">
+        <p>Join us for</p>
+        <img src="mountainman.jpg" alt="picture of mountain man" />
+      </div>
+    </div>
 
-<hr/>                                      
-<footer>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <span class="fa fa-icon_name"></span>
+    <!-- Footer Menu -->
+    <footer id="footer">
+      <!-- Company Details -->
+      <!-- 1. Address
+        2. Contact Number
+        3. Enquiry Mail
+    -->
+      <div class="company-details">
+        <div class="row">
+          <div id="col1">
+            <span
+              id="icon"
+              class="fa fa-map-marker"
+              style="margin-bottom: 6px"
+            ></span>
 
-From <cite>A Boy's Will</cite> published by Henry Holt and Company &copy; 1913 (in the public domain) 
+            <span>
+              4910 S 135th St.
+              <br />Manchester, New Hampshire <br />03101
+            </span>
+          </div>
 
-</footer>
-</body>
+          <div id="col2">
+            <span id="icon" class="fa fa-phone"></span>
+
+            <span> Telephone: (202)-555-0154 </span>
+          </div>
+
+          <div id="col3">
+            <span id="icon" class="fa fa-envelope"></span>
+            <span>acadia@gmail.com</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Section -->
+      <div class="copyright">
+        <p>© All rights reserved | Acadia</p>
+        <ul class="contact">
+          <li>
+            <a href="#" class="fa fa-twitter"> </a>
+          </li>
+          <li>
+            <a href="#" class="fa fa-facebook"> </a>
+          </li>
+          <li>
+            <a href="#" class="fa fa-instagram"> </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>
