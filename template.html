@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>template</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .wrapper {
+      background-color: #25E79C;
+      display: grid;
+      grid-template-areas:
+        "b1 b1"
+        "b2 b3"
+        "b4 b4";
+    }
+
+    .box {
+      background-color: #E4CEF2;
+      display: block;
+
+    }
+
+    .b1{
+      grid-area: b1;
+      height: 40vh;
+    }
+    .b2{
+      grid-area: b2;
+      height: 30vh;
+    }
+    .b3{
+      grid-area: b3;
+      height: 30vh;
+    }
+    .b4{
+      grid-area: b4;
+      height: 30vh;
+    }
+    
+    </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="box b1">
+      <div class="title">Graphic Designer</div>
+      <div class="content">
+        <h1>
+          All
+          <div class="bold">
+            ABOUT
+          </div>
+          Gabriel Jones
+        </h1>
+      </div>
+    </div>
+    <div class="box b2">
+      <div class="title">About</div>
+      <div class="content">
+        <img src="hello-with-hearts.png">
+      </div>
+    </div>
+    <div class="box b3">
+      <div class="title">The Artist</div>
+      <div class="content">
+        <img src="the-artist.png">
+      </div>
+    </div>
+    <div class="box b4">
+      <div class="title">SHOP NOW</div>
+      <div class="content">
+        <a href="graphicelle.com">GraphicElle.com</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

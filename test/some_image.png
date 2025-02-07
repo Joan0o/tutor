@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Gabriel Jones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Products by Gabriel Jones</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="products.html">Products</a>
+                <ul class="submenu">
+                    <li><a href="#">Digital Art/Designs</a></li>
+                </ul>
+            </li>
+            <li><a href="services.html">Services</a>
+                <ul class="submenu">
+                    <li><a href="#">Flyers</a></li>
+                    <li><a href="#">Posters</a></li>
+                    <li><a href="#">Social Media Ads</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <h2>Products</h2>
+        <p>Explore the range of digital art and designs created by Gabriel Jones...</p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Gabriel Jones. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

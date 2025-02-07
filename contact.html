@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 
@@ -115,3 +116,90 @@
     </div>
     <!--End Footer-->
 </body></html>
+=======
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Your Name - Online Resume</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+    <link href="https://fonts.googleapis.com/css?family=Quando" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/w3.css">     
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <!-- Sidebar Navigation -->
+    <nav class="w3-sidebar w3-bar-block  w3-animate-left w3-center main-purple" style="display:none" id="mySidebar">
+        <h5 class="w3-xlarge">Menu</h5>
+        <button class="w3-bar-item w3-button w3-border-bottom w3-hover-black" onclick="w3_close()">Close</button>
+        <a href="#main" class="w3-bar-item w3-button w3-border-bottom main-hover-green">Home</a>
+        <a href="#about" class="w3-bar-item w3-button w3-border-bottom main-hover-green">About</a>
+        <a href="#skills" class="w3-bar-item w3-button w3-border-bottom main-hover-green">Skills</a>
+        <a href="#experience" class="w3-bar-item w3-button w3-border-bottom main-hover-green">Experience</a>
+        <a href="#education" class="w3-bar-item w3-button w3-border-bottom main-hover-green">Education</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-border-bottom main-hover-green">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div id="main">
+        <p id="start" onclick="w3_open()" class="w3-xlarge w3-btn ">&#9776;</p>
+
+        <!-- Header -->
+        <header class="w3-center w3-container w3-padding">
+            <h1>Your Name</h1>
+            <h2>Web Developer | Designer | Programmer</h2>
+        </header>
+
+        <!-- Contact Section -->
+        <section id="contact" class="w3-container w3-center w3-padding">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to reach out through the form below!</p>
+            <form action="contact.html" method="post">
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="name" type="text" placeholder="Your Name" required>
+                    </div>
+                </div>
+
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" name="email" type="email" placeholder="Your Email" required>
+                    </div>
+                </div>
+
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
+                    <div class="w3-rest">
+                        <textarea class="w3-input w3-border" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                </div>
+
+                <button class="w3-button w3-block w3-padding-large main-purple w3-margin-bottom">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        function w3_open() {
+            document.getElementById("start").style.display = 'none';
+            document.getElementById("main").style.marginLeft = "25%";
+            document.getElementById("mySidebar").style.width = "25%";
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("start").style.display = 'block';
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
+>>>>>>> a977aa7 (gitignore)

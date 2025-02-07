@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,3 +25,159 @@ h1 {text-align: center;}
 <h2><a href="https://www.alabama.gov/">Alabama</a></h2>
 <body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Gabriel Jones</title>
+    <meta name="description" content="Learn about Gabriel Jones, a talented graphic designer and artist.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Gabriel Jones - Graphic Designer</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="products.html">Products</a>
+                <ul class="submenu">
+                    <li><a href="#">Digital Art/Designs</a></li>
+                </ul>
+            </li>
+            <li><a href="services.html">Services</a>
+                <ul class="submenu">
+                    <li><a href="#">Flyers</a></li>
+                    <li><a href="#">Posters</a></li>
+                    <li><a href="#">Social Media Ads</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Tabbed Panels -->
+        <div id="tabs">
+            <ul>
+                <li><a href="#tab1">Panel 1</a></li>
+                <li><a href="#tab2">Panel 2</a></li>
+                <li><a href="#tab3">Panel 3</a></li>
+            </ul>
+            <div id="tab1">
+                <img src="image1_large.jpg" alt="Panel 1 Image">
+                <p>Content for Panel 1. <a href="#" id="more-content-link">Read more</a></p>
+            </div>
+            <div id="tab2">
+                <img src="image2_large.jpg" alt="Panel 2 Image">
+                <p>Content for Panel 2.</p>
+            </div>
+            <div id="tab3">
+                <img src="image3_large.jpg" alt="Panel 3 Image">
+                <p>Content for Panel 3.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Gabriel Jones. All rights reserved.</p>
+    </footer>
+
+    <!-- Overlay for More Content -->
+    <div id="more-content-overlay">
+        <span id="close-more-content">&times;</span>
+        <div id="more-content">
+            <h2>More Content</h2>
+            <ul>
+                <li><a href="https://example.com" target="_blank">Example Site 1</a></li>
+                <li><a href="https://example.com" target="_blank">Example Site 2</a></li>
+                <li><a href="https://example.com" target="_blank">Example Site 3</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Form Validation -->
+    <section class="contact-form">
+        <h2>Contact Gabriel</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required pattern="[A-Za-z ]{3,}">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script>
+        $(document).ready(function () {
+            // Initialize tabs
+            $("#tabs").tabs();
+
+            // Toggle submenus on hover
+            $('.navbar li').hover(function () {
+                $(this).children('.submenu').slideToggle('fast');
+            });
+
+            // Image gallery overlay
+            $('.thumbnail').click(function (event) {
+                event.preventDefault();
+                var imgSrc = $(this).attr('href');
+                $('#overlay-img').attr('src', imgSrc);
+                $('#overlay').fadeIn();
+            });
+
+            $('#close-overlay').click(function () {
+                $('#overlay').fadeOut();
+            });
+
+            // More content overlay
+            $('#more-content-link').click(function (event) {
+                event.preventDefault();
+                $('#more-content-overlay').fadeIn();
+            });
+
+            $('#close-more-content').click(function () {
+                $('#more-content-overlay').fadeOut();
+            });
+
+            // Form validation
+            $('#contactForm').submit(function (event) {
+                var isValid = true;
+                var namePattern = /^[A-Za-z ]{3,}$/;
+                var emailPattern = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+
+                if (!namePattern.test($('#name').val())) {
+                    alert('Please enter a valid name (at least 3 characters).');
+                    isValid = false;
+                }
+                if (!emailPattern.test($('#email').val())) {
+                    alert('Please enter a valid email address.');
+                    isValid = false;
+                }
+
+                if (!isValid) {
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
+>>>>>>> a977aa7 (gitignore)
