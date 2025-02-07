@@ -1,454 +1,129 @@
-<<<<<<< HEAD
-body, p, header, aside, section, article, h1, h2, h3, nav, div, footer {
-   padding: 10;
-   margin: 0;
-}
-p {
-   margin-bottom: 1.2 em;
-}
-header {
-   text-align: center;
-background-color: #bdb76b;
-   height: 200px;
-}
-header h1 {
-   color: #2542122;
-   font-weight: 900;
-   font-size: 2.5em;
-   margin: 0 0 1em 0;
-}
-aside {
-   max-width: 200px;
-   float: left;
-   min-height: 600px;
-   color:#000000;
-   background-color: #dcdcdc;
-   padding-right: 10px;
-}
-aside p {
-   padding: 10 px 20px;
-}
-section {
-   padding: 10px;
-   float: left:
-   max-width: 65%;
-   background-image: url(../bg01.png)
-}
-article p {
-   padding-left: 1.5em;
-}
-footer {
-   clear: both;
-   background-color:#bdb76b;
-   text-align: center;
-   font-size: 85%;
-   min-height:100px;
-}
-footer p {
-   padding-top: 35%;
-}
-nav ul {
-   margin: 0;
-   list-style: none;
-}
-nav ul li {
-   display: inline-block;
-   margin: 0 0.35em;
-}
-nav ul li ul {
-   display: none;
-}
-nav ul li a{
-   border-radius: 5px;
-   border: solid gray 2px;
-   color: black;
-   font-family: sans-serif;
-   text-decoration: none;
-   padding: 0.6 em 1.2em 0.6 em 1.2 em;
-   background-color: whitesmoke;
-   outline: 0;
-}
-.cols {
- /*  -webkit-column-count: 3;
-   -moz-column-count: 3;
-   column-count: 3;
-   -webkit-column-gap: 10px;
-   -moz-column-gap: 10px;
-   column-gap: 10px; */
-   -webkit-column-width: 200px;
-   -moz-column-width: 200px;
-   column-width: 200px;
-}
-.cols-span {
-   -webkit-column-span: all;
-   -moz-column-span: all;
-   column-span: all;
-   font-size: 1.2 em;
-   margin-bottom: 0.2em;
-   line-height: 1.2 em;
-}
-.cols p {
-   margin-bottom: 1.1em;
-   text-align: justify;
-}
-.lead {
-   font-family: Georgia;
-   font-size: 1.3em;
-   text-align: left;
-   font-style: italic;
-}
-.rgt {
-   float: right;
-   max-width: 30%;
-}
-img {
-   padding: 0.3em;
-}
-.spec {
-   margin: -5px 5 10px 5;
-   border-bottom: 1px solid #483838;
-   line-height: 0;
-}
-.ads{
-   float: right;
-   text-align: center;
-   font-size: 90%;
-   color: #b49898;
-   background-color: #dcdcdc;
-   }
-.ads p {
-   padding-top: 0.3em;
-=======
-/* Fullscreen Video Container */
-p {
-    font-size: 28px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
-
-#video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    z-index: 10;
-}
-
-/* Video Styling */
-#intro-video {
-    width: 100vw;
-    height: 100vh;
-    object-fit: contain;
-    background-color: black;
-}
-
+html,
 body {
     margin: 0;
-}
-
-/* Fireplace Section */
-#fireplace-container {
-    position: relative;
-    width: 99vw;
-    height: 97vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-family: "Georgia", serif;
-    text-align: center;
-    margin: 0;
-}
-
-/* Overlay Heading */
-#fireplace-container h1 {
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2.5rem;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-    z-index: 2;
-    margin: 0;
-}
-
-/* Fireplace Image and Flames */
-#fireplace {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
-
-#fireplace-still {
-    width: 100%;
+    padding: 0;
     height: 100%;
-    object-fit: cover;
+    /* this part is also necessary to allow that to happen*/
 }
 
-#fire-flames {
-    position: absolute;
-    bottom: 17%;
-    left: 640px;
-    transform: translateX(-50%);
-    width: 27%;
-    height: 200px;
-    pointer-events: none;
-}
-
-/* Logs Section */
-#logs {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 20px;
-    z-index: 2;
-}
-
-.log {
-    position: absolute;
-    cursor: grab;
-    width: 160px;
-    height: auto;
-    user-select: none;
-    bottom: 0px;
-}
-
-.log:hover {
-    transform: scale(1.1);
-}
-
-/* Stocking Container */
-#stocking-container {
-    position: relative;
-    /* Keeps it relative to the parent container */
-    width: 100%;
-    /* Full width for alignment */
+.main-content {
     height: 100vh;
-    /* Set to viewport height to position vertically */
+    margin-top: -30px;
+    background: rgba(0, 0, 0, 0.3);
+    /* this makes the height of our <main> tag span the whole height of the window*/
 }
 
-.stocking-container {
-    position: absolute;
-    /* Position absolutely within the parent */
-    top: 50%;
-    /* Align to middle vertically */
-    transform: translateY(-50%);
-    /* Offset for true vertical centering */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Center the image and label horizontally */
+h1 {
+    color: #DFDAAB;
+    /* since in this line we're making the text be the same color as the background, it wont show*/
+    margin-left: 80%;
+    padding-top: 8%;
+
 }
 
-.stocking {
-    width: 80px;
-    /* Adjust size as needed */
-    cursor: pointer;
-    transition: transform 0.3s ease;
+h2 {
+    color: #DFDAAB;
+    /* Let's make it another color*/
+    padding-left: 10%;
+    padding-top: auto;
+
 }
 
-.stocking:hover {
-    transform: scale(1.1) rotate(-5deg);
-    /* Add hover effect */
+
+body {
+    background-color: #491000;
+    background-image: url(images/coffee_cups.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-/* Positioning the Left and Right Stockings */
-.left-stocking {
-    left: 5%;
-    /* Push to the left */
-}
-
-.right-stocking {
-    right: 5%;
-    /* Push to the right */
-}
-
-/* Caption under the stocking */
-.page-label {
-    margin-top: 10px;
-    font-size: 1.2em;
-    color: white;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-}
-
-/* Text Instructions on Top of Image */
-#fireplace-container>p {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    text-align: center;
-    font-size: 1.5em;
-    color: white;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+ul {
+    list-style-type: none;
     margin: 0;
-    padding: 10px 15px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    max-width: 90%;
-    margin: 0 auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Dining Room Background */
-#dining-room-container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background: url("images/background.png") center/cover no-repeat;
+    padding: 0;
+    overflow: hidden;
+    float: right;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    font-family: "Georgia", serif;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Message Box Styling */
-#message-box {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px 30px;
-    border-radius: 10px;
-    max-width: 900px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-top: -400px;
+
+li a {
+    display: block;
+    padding: 8px;
 }
 
-#message-box2 {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px 30px;
-    border-radius: 10px;
-    max-width: 900px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-top: 300px;
-}
-
-#message-box3 {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px 30px;
-    border-radius: 10px;
-    max-width: 900px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-top: 300px;
-}
-
-/* Emphasized Text */
-#message-box strong {
-    font-size: 32px;
-    color: #ffdd57;
-}
-
-#message-box em {
-    font-style: italic;
-    color: #e0e0e0;
-}
-
-/* Yule Log Background */
-#yule-log-container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background: url("images/background.png") center/contain no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    font-family: "Georgia", serif;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-/* Link Styling */
-#yule-link {
-    color: #ffdd57;
+a:link,
+a:visited {
+    color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-#yule-link:hover {
-    color: #ffd700;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+#logo {
+    display: none;
 }
 
-/* Orchard Background */
-#orchard-container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background: url("images/background.png") center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    font-family: "Georgia", serif;
-    background-color: rgba(0, 0, 0, 0.5);
+nav {
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-/* Link Styling */
-#wassail-link {
-    color: #ffdd57;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-#wassail-link:hover {
-    color: #ffd700;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
-}
-
-/* Skip Video Button Styling */
-#skip-button {
-    position: absolute;
-    bottom: 60px;
-    right: 0px;
+nav a {
     padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    z-index: 20;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3 ease;
 }
 
-#skip-button:hover {
-    background-color: rgba(0, 0, 0, 0.9);
+
+
+nav a:hover {
+    color: #883E24;
+
 }
 
-/* Responsive Adjustments for Small Screens */
+label {
+    color: white;
+    font-size: 12px;
+
+}
+
+
+
+/* let's play with the layout here */
+.header,
+.banner,
+.buttons {
+    height: 33vh;
+}
+
+
+
+
 @media (max-width: 768px) {
-    #fireplace {
-        width: 100%;
+
+    /* Mobile styles */
+
+    nav ul {
+
+        display: block;
+        /* Stack the items vertically */
+        width: 70%;
+        padding: 10%;
+        font-size: 12px;
+
     }
 
-    .log {
-        width: 60px;
+}
+
+@media (min-width: 769px) {
+
+    /* Desktop styles */
+    nav ul {
+        display: flex;
+        /* Align items horizontally */
+        list-style: none;
+        padding: 0%;
+
     }
 
-    h1 {
-        font-size: 1.5em;
-    }
->>>>>>> a977aa7 (gitignore)
 }
